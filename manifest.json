@@ -1,0 +1,10 @@
+{
+    "name": "DDOSKI REPLACE",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "description" : "Replace an image with ddoski",
+    "content_scripts": [{
+        "matches": ["http://*", "https://*"],
+        "js": ["js/jquery-2.1.1.js", "js/replace.js"]
+    }]
+}
