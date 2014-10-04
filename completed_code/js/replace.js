@@ -8,39 +8,23 @@ $(document).ready(function(){
 		var i = Math.floor(Math.random()*categories.length);
 		return categories[i];
 	}
-	function replaceWithKittens(){
+	function replaceWithPicture(){
 		$('img').each(function(i){
-			var $kittenDiv = $(this);
-			if ($kittenDiv.attr('kitten-change') != 'true') {
-				$kittenDiv.attr('kitten-change', 'true');
-				$kittenDiv.ready(function() {
-					var w = Math.round($kittenDiv.width());
-					var h = Math.round($kittenDiv.height());
-					if ($kittenDiv.attr('src') && $kittenDiv.attr('src').indexOf('lorempixel') == -1) {
-						$kittenDiv.attr('src','http://lorempixel.com/'+w+'/'+h+getCategory());
-					} else if (!$kittenDiv.attr('src')) {
-						$kittenDiv.attr('src','http://lorempixel.com/'+w+'/'+h+getCategory());
+			var $picture = $(this);
+			if ($picture.attr('kitten-change') != 'true') {
+				$picture.attr('kitten-change', 'true');
+				$picture.ready(function() {
+					var w = Math.round($picture.width());
+					var h = Math.round($picture.height());
+					if ($picture.attr('src') && $picture.attr('src').indexOf('lorempixel') == -1) {
+						$picture.attr('src','http://lorempixel.com/'+w+'/'+h+getCategory());
+					} else if (!$picture.attr('src')) {
+						$picture.attr('src','http://lorempixel.com/'+w+'/'+h+getCategory());
 					}
 					
 				});
 			}
 		});
-		// $('div').each(function() {
-		// 	var $kittenDiv = $(this);
-		// 	var w = Math.round($kittenDiv.width());
-		// 	var h = Math.round($kittenDiv.height());
-		// 	if ($kittenDiv.css('background-image') != "none") {
-		// 		$kittenDiv.css('background-image','url("http://lorempixel.com/'+w+'/'+h+'")');
-		// 	}
-		// });
-		// $('span').each(function() {
-		// 	var $kittenDiv = $(this);
-		// 	var w = Math.round($kittenDiv.width());
-		// 	var h = Math.round($kittenDiv.height());
-		// 	if ($kittenDiv.css('background-image') != "none") {
-		// 		$kittenDiv.css('background-image','url("http://lorempixel.com/'+w+'/'+h+'")');
-		// 	}
-		// });
 	}
 	
 });
