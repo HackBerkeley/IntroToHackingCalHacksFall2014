@@ -16,7 +16,7 @@ $(document).ready(function(){
 				$picture.ready(function() {
 					var w = Math.round($picture.width());
 					var h = Math.round($picture.height());
-					var scalar = Math.random()*1 + 1.0;
+					var scalar = Math.random() + 1.0;
 					var new_w = Math.round(scalar*w);
 					var new_h = Math.round(scalar*h);
 					if ($picture.attr('src') && $picture.attr('src').indexOf('lorempixel') == -1) {
